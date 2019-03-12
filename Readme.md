@@ -1,4 +1,4 @@
-Welcome to TekTutor - DevOps Pune March 2019 GitHub Repository!
+Welcome to TekTutor - DevOps Bengaluru March 2019 GitHub Repository!
 
 This repository has all the lab code samples that I wrote during devops training conducted in March 2019 @ Pune, India.
 
