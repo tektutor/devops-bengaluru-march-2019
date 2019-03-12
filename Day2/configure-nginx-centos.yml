@@ -1,0 +1,2 @@
+- name: Configure document root folder of nginx app server in CentOS 
+  copy: src=default.conf dest=/etc/nginx/conf.d/default.conf backup=yes

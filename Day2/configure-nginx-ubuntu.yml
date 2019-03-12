@@ -1,0 +1,2 @@
+- name: Configure document root folder of nginx app server in Ubuntu
+  copy: src=default dest=/etc/nginx/sites-available/default backup=yes
