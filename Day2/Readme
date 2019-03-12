@@ -1,0 +1,3 @@
+The playbook can be executed as shown below
+
+ansible-playbook -i hosts install-nginx.yml

@@ -1,0 +1,22 @@
+- name: Installs nginx app server, configure it and deploy custom web page in it.
+  hosts: all
+  vars:
+    - greeting_message: DevOps!
+    - provisioner_tool: Docker
+    - cm_tool: Ansible
+  tasks:
+    - name: Install nginx app server
+      apt: name=nginx state=latest update_cache=yes
+
+    - name: Configure document root folder of nginx app server
+      copy: src=default dest=/etc/nginx/sites-available/default backup=yes
+
+    - name: Create updated document root folder in nginx app server
+      file: path=/var/html state=directory mode=0777
+
+    - name: Restart nginx app server
+      command: service nginx restart
+
+    - name: Deploy custom web page into nginx app server
+      template: src=index.html.j2 dest=/var/html/index.html
+   

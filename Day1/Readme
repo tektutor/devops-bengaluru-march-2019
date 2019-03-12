@@ -1,0 +1,62 @@
+Instructions to install docker-ce in CentOS 7
+++++++++++++++++++++++++++++++++++++++++++++++
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install docker-ce
+
+You can check if your Docker is installed properly by checking docker version
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker --version
+
+Starting Docker Engine Service in CentOS
++++++++++++++++++++++++++++++++++++++++++
+systemctl enable docker
+systemctl start docker
+
+Downloading/Pulling an image to Local Docker Registry
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker pull hello-world
+
+Deleting an unwanted image from Local Docker Registry
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker rmi hello-world
+
+Listing docker images
++++++++++++++++++++++
+docker images
+
+Listing currently running docker containers
++++++++++++++++++++++++++++++++++++++++++++
+docker ps
+
+Listing only the container ids of currently running docker containers
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker ps -q
+
+Listing all containers including the ones that are exited
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+docker ps -a
+
+Listing only the container ids of all containers
+++++++++++++++++++++++++++++++++++++++++++++++++
+docker ps -aq
+
+Stopping a currently running container
+++++++++++++++++++++++++++++++++++++++
+docker stop ubuntu1
+docker stop <container-id>
+
+Starting a stopped/exited container
++++++++++++++++++++++++++++++++++++
+docker start ubuntu1
+docker start <container-id>
+
+Removing a container
+++++++++++++++++++++
+docker stop ubuntu1 && docker rm ubuntu1
+docker rm -f ubuntu1
+
+Removing all containers
++++++++++++++++++++++++
+docker stop $(docker ps -q) && docker rm $(docker ps -aq)
+docker rm -f $(docker ps -aq)
