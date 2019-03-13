@@ -1,0 +1,9 @@
+You can download the LTS Generic war from the below URL
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+
+You can install JDK as shown below on your CentOS Training machine
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+sudo yum install java-1.8.0-openjdk-devel
+
+You can install Maven build tool

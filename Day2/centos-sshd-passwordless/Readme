@@ -1,7 +1,9 @@
 Copy the public key as authorized_keys in the current directory
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 cp /root/.ssh/id_rsa.pub authorized_keys
 
 Build the Custom CentOS Ansible image
++++++++++++++++++++++++++++++++++++++
 docker build -t tektutor/ansible-centos .
 
 Test if the image got built successfully by
