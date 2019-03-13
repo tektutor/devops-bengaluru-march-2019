@@ -2,7 +2,8 @@
   file: path=/var/html state=directory mode=0777
 
 - name: Restart nginx app server
-  command: service nginx restart
+  #command: service nginx restart
+  service: name=nginx state=restarted
 
 - name: Deploy custom web page into nginx app server
   template: src=index.html.j2 dest=/var/html/index.html
