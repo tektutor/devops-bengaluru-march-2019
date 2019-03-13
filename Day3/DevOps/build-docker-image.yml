@@ -28,6 +28,7 @@
       docker_image:
          name: "tektutor/ansible-ubuntu"
          dockerfile: UbuntuDockerfile
+         docker_host: "tcp://localhost:4243"
          path: .
          state: build
 
