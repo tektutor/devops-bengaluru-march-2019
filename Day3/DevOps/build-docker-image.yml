@@ -32,12 +32,12 @@
          path: .
          state: build
 
-#    - name: Build CentOS Ansible image
-#      docker_image:
-#         name: "tektutor/ansible-centos"
-#         dockerfile: CentOSDockerfile
-#         path: .
-#         state: build
+    - name: Build CentOS Ansible image
+      docker_image:
+         name: "tektutor/ansible-centos"
+         dockerfile: CentOSDockerfile
+         path: .
+         state: build
 
 
 
